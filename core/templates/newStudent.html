@@ -1,0 +1,21 @@
+<html lang="en">
+<body>
+	<h1>update Student</h1>
+	
+	<form method="POST">
+	    {% csrf_token %}
+		{{ form }}
+		
+		<button type="submit">Save</button>
+		
+	</form>
+	
+	{% if student %}
+	    <a href="{% url 'deleteStudent' student.id %}">Delete</a>
+		
+	{% endif %}
+	
+</body>
+		
+		
+</html>
